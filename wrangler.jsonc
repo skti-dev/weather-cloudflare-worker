@@ -9,7 +9,21 @@
 	"compatibility_date": "2025-11-13",
 	"observability": {
 		"enabled": true
-	}
+	},
+	"vars": {
+		"WEATHER_BASE_URL": "https://api.weatherapi.com/v1"
+	},
+	"triggers": {
+		"crons": [
+			"*/5 * * * *"
+		]
+	},
+	"kv_namespaces": [
+		{
+			"binding": "WEATHER_KV",
+			"id": "84cbfe92c59848c38e4eacf083636d3c"
+		}
+	],
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
